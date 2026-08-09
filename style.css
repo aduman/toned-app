@@ -1,0 +1,45 @@
+/* Toned. The palette is the app's own: near-black card, safelight amber, warm paper for the
+   surfaces that stand for a print. Anything else would make the site and the product look like
+   two different things. */
+:root{
+  --ink:#0b0b0c; --raise:#141416; --line:#26262a;
+  --text:#eceded; --soft:#9a9aa0;
+  --amber:#e8b057; --paper:#f2eee6;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ink);color:var(--text);
+  font:17px/1.65 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Segoe UI,Roboto,sans-serif;
+  /* One dim lamp, high and left, falling off into nothing. */
+  background-image:radial-gradient(900px 620px at 12% -6%, rgba(232,176,87,.13), transparent 62%);
+  background-repeat:no-repeat;
+}
+.wrap{max-width:680px;margin:0 auto;padding:52px 24px 88px}
+header{display:flex;align-items:center;gap:15px;margin-bottom:10px}
+/* The mark is the product in one glyph: a frame that is orange-masked negative on one side and
+   printed on the other. */
+.mark{width:46px;height:46px;border-radius:11px;flex:none;position:relative;overflow:hidden;
+  background:linear-gradient(100deg,#c2622c 0 50%,#d8d4cc 50% 100%);
+  box-shadow:0 0 0 1px rgba(255,255,255,.10) inset,0 6px 18px rgba(0,0,0,.55)}
+.mark:before,.mark:after{content:"";position:absolute;left:5px;right:5px;height:5px;
+  background:repeating-linear-gradient(90deg,rgba(11,11,12,.85) 0 4px,transparent 4px 9px)}
+.mark:before{top:4px} .mark:after{bottom:4px}
+h1{font-size:31px;margin:0;letter-spacing:-.02em}
+h2{font-size:20px;margin:38px 0 10px;letter-spacing:-.01em}
+.tag{color:var(--soft);margin:.2em 0 0}
+p{margin:.7em 0}
+a{color:var(--amber);text-decoration:none}
+a:hover{text-decoration:underline}
+.lede{font-size:19px;color:#dcdce0}
+.card{background:var(--raise);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
+.card strong{display:block;margin-bottom:.25em}
+.card p{margin:.4em 0 0;color:var(--soft)}
+ul{padding-left:1.1em}
+li{margin:.4em 0}
+small,.muted{color:var(--soft);font-size:14px}
+.kicker{font:600 13px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--soft);margin:0 0 6px}
+nav{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:15px}
+nav a{margin-right:18px}
+hr{border:none;border-top:1px solid var(--line);margin:28px 0}
